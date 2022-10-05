@@ -5,6 +5,15 @@
   <section
     id="services"
     class="section bg-light-secondary dark:bg-dark-secondary"
+    v-motion
+      :initial="{
+        opacity: 0,
+        y: 100,
+      }"
+      :visible="{
+        opacity: 1,
+        y: 0,
+      }"
   >
     <div
       class="container mx-auto"

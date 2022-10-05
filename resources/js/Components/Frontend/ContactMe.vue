@@ -22,14 +22,24 @@ function cleanForm() {
 
 const submit = () => {
   form.post(route("contact"), {
-
     onSuccess: () => cleanForm(),
   });
 };
 </script>
 <template>
   <section id="contact" class="section bg-light-primary dark:bg-dark-primary">
-    <div class="container mx-auto">
+    <div
+      class="container mx-auto"
+      v-motion
+      :initial="{
+        opacity: 0,
+        y: 100,
+      }"
+      :visible="{
+        opacity: 1,
+        y: 0,
+      }"
+    >
       <div class="flex flex-col items-center text-center">
         <h2 class="section-title">Contact Me</h2>
         <p class="subtitle">
@@ -80,7 +90,7 @@ const submit = () => {
             </div>
             <div>
               <h4 class="font-body text-xl mb-1">Have a question?</h4>
-              <P class="mb-1 text-paragraph">I am here to help you.</P>
+              <p class="mb-1 text-paragraph">I am here to help you.</p>
               <p class="text-accent font-normal">Email me at john@doe.com</p>
             </div>
           </div>
@@ -122,7 +132,7 @@ const submit = () => {
             </div>
             <div>
               <h4 class="font-body text-xl mb-1">Current Location</h4>
-              <P class="mb-1 text-paragraph">Tirana, Albania.</P>
+              <p class="mb-1 text-paragraph">Tirana, Albania.</p>
               <p class="text-accent font-normal">Serving clients worldwide.</p>
             </div>
           </div>
