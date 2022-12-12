@@ -80,7 +80,7 @@
                 mb-2
               "
             >
-              Follow me on
+              Follow me on 1
             </h5>
             <div class="flex items-center mb-6">
               <a
